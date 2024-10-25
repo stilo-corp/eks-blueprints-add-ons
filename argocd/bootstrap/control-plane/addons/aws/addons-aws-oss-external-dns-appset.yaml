@@ -58,6 +58,7 @@ spec:
               - $values/{{.metadata.annotations.addons_repo_basepath}}clusters/{{.name}}/addons/{{.values.addonChart}}/values.yaml
             values: |
               provider: aws
+              source: traefik-proxy
               serviceAccount:
                 name: {{.metadata.annotations.external_dns_service_account}}
                 annotations:
@@ -66,7 +67,6 @@ spec:
                 - {{default "" .metadata.annotations.eks_cluster_domain}}
               txtOwnerId: {{.metadata.annotations.aws_cluster_name}}
               policy: {{default "upsert-only" .metadata.annotations.external_dns_policy}}
-              --source=traefik-proxy
       destination:
         namespace: '{{.metadata.annotations.external_dns_namespace}}'
         name: '{{.name}}'
