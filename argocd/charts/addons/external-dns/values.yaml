@@ -1,4 +1,0 @@
-sources:
-  - traefik-proxy
-  - service
-  - ingress
