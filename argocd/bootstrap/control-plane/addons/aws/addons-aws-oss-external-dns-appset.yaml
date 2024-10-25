@@ -57,6 +57,7 @@ spec:
               - $values/{{.metadata.annotations.addons_repo_basepath}}environments/{{.metadata.labels.environment}}/addons/{{.values.addonChart}}/values.yaml
               - $values/{{.metadata.annotations.addons_repo_basepath}}clusters/{{.name}}/addons/{{.values.addonChart}}/values.yaml
             values: |
+              provider: aws
               serviceAccount:
                 name: {{.metadata.annotations.external_dns_service_account}}
                 annotations:
