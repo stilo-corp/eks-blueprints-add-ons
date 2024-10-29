@@ -78,7 +78,7 @@ spec:
                     eks.amazonaws.com/role-arn: {{metadata.annotations.velero_iam_role_arn}}
               initContainers:
               - name: velero-plugin-for-aws
-                image: velero/velero-plugin-for-aws:v1.7.1
+                image: velero/velero-plugin-for-aws:v1.10.1
                 imagePullPolicy: IfNotPresent
                 volumeMounts:
                   - mountPath: /target
