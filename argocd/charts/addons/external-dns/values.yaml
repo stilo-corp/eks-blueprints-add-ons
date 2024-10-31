@@ -3,7 +3,7 @@ sources:
   - ingress
   - traefik-proxy
 
-annotationFilter: "kubernetes.io/ingress.class=traefik-external"
+annotationFilter: kubernetes.io/ingress.class=traefik-external
 
 txtPrefix: stl-
 # -- (string) Specify a suffix for the domain names of TXT records created for the `txt` registry.
